@@ -1,0 +1,19 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+my:
+  id: 101
+  name: sunil
+  role: Developer
+  
+spring:
+  #profiles:
+   # active: test
+  application:
+    name : spring-boot-config 
+#  cloud:
+#    config: 
+#      uri : http://localhost:8888
+spring.config.import: optional:configserver:http://localhost:8888
